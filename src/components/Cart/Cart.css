@@ -1,0 +1,290 @@
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.cart-modal {
+  background-color: white;
+  width: 400px;
+  height: 100%;
+  padding: 20px;
+  overflow-y: hidden;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-header {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-items {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 10px;
+  max-height: calc(100vh - 400px);
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.item-details {
+  flex-grow: 1;
+  min-width: 0; /* Taşmayı önlemek için */
+}
+
+.item-details h3 {
+  font-size: 0.9rem;
+  margin: 0 0 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-details p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.quantity-controls button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid #ddd;
+  background: #f8f9fa;
+  color: #2c3e50;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.quantity-controls button:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.quantity-controls button:active {
+  background: #dee2e6;
+}
+
+.quantity-controls span {
+  min-width: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.remove-button {
+  padding: 4px 8px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.cart-footer {
+  flex-shrink: 0;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  background-color: white;
+  position: sticky;
+  bottom: 20px;
+  margin-top: auto;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+.cart-total {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.cart-total strong {
+  color: #2c3e50;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.cart-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.clear-cart {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.clear-cart:hover {
+  background-color: #c0392b;
+}
+
+.checkout {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.checkout:hover {
+  background-color: #27ae60;
+}
+
+/* Boş sepet stili */
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  gap: 20px;
+}
+
+.continue-shopping {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.continue-shopping:hover {
+  background-color: #2980b9;
+}
+
+/* Diğer cart ile ilgili stiller... */
+
+.item-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.price-per-item {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  margin-left: 5px;
+  font-weight: normal;
+}
+
+/* Kaydırma çubuğu stilleri */
+.cart-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cart-items::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.cart-items::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.order-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  text-align: center;
+  gap: 20px;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.order-success h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.order-success p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin: 0;
+}
