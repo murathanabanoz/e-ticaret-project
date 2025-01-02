@@ -21,11 +21,11 @@ function App() {
   }, [status, dispatch]);
 
   if (status === "loading") {
-    return <div>Yükleniyor...</div>;
+    return <div>Ürünler yükleniyor lütfen bekleyiniz...</div>;
   }
 
   if (status === "failed") {
-    return <div>Hata: {error}</div>;
+    return <div>Hata meydana geldi: {error}</div>;
   }
 
   return (
