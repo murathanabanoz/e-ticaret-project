@@ -6,14 +6,29 @@ import {
   placeOrder,
 } from "../../store/cartSlice";
 import "./Cart.css";
+import { useNavigate } from "react-router-dom";
 
 function Cart({ isOpen, onClose }) {
   const { items, total, orderPlaced } = useSelector((state) => state.cart);
+  const { isAuthenticated } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   if (!isOpen) return null;
 
   const handleCheckout = () => {
+    if (!isAuthenticated) {
+      if (
+        window.confirm(
+          "Ödeme yapmak için giriş yapmanız gerekmektedir. Giriş sayfasına yönlendirilmek ister misiniz?"
+        )
+      ) {
+        onClose();
+        navigate("/login");
+      }
+      return;
+    }
+
     if (window.confirm("Siparişinizi onaylıyor musunuz?")) {
       dispatch(placeOrder());
     }

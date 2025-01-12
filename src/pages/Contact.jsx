@@ -38,15 +38,13 @@ function Contact() {
           <div className="info-card">
             <div className="info-icon">📧</div>
             <h3>E-posta</h3>
-            <p>info@eticaret.com</p>
-            <p>destek@eticaret.com</p>
+            <p>abanoz722@gmail.com</p>
           </div>
 
           <div className="info-card">
             <div className="info-icon">📞</div>
             <h3>Telefon</h3>
-            <p>+90 (212) 123 45 67</p>
-            <p>+90 (212) 123 45 68</p>
+            <p>+90 (505) 123 45 67</p>
           </div>
         </div>
 
@@ -95,7 +93,7 @@ function Contact() {
                 setFormData({ ...formData, subject: e.target.value })
               }
               required
-              placeholder="Mesajınızın konusu"
+              placeholder="Mesajınızın konusu (Örn: Sipariş, Destek, Teknik Sorun)"
             />
           </div>
 

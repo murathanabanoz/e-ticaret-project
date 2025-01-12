@@ -35,14 +35,14 @@ function Navbar({ onCartClick }) {
             </button>
           </>
         ) : (
-          <>
+          <div className="auth-buttons">
             <Link to="/login" className="login-button">
               Giriş Yap
             </Link>
             <Link to="/register" className="register-button">
               Kayıt Ol
             </Link>
-          </>
+          </div>
         )}
         <button className="cart-button" onClick={onCartClick}>
           Sepet ({items.length})

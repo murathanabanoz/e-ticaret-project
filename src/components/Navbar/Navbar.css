@@ -44,6 +44,11 @@
   gap: 15px;
 }
 
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
 .username {
   color: #2c3e50;
   font-weight: 500;
@@ -55,6 +60,7 @@
   border-radius: 4px;
   text-decoration: none;
   transition: background-color 0.2s;
+  white-space: nowrap;
 }
 
 .login-button {
@@ -120,15 +126,24 @@
   }
 
   .nav-auth {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
   }
 
   .login-button,
   .register-button,
   .logout-button,
   .cart-button {
-    width: 100%;
+    width: auto;
     text-align: center;
+    white-space: nowrap;
   }
 }
