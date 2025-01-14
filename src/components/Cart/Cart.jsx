@@ -40,9 +40,6 @@ function Cart({ isOpen, onClose }) {
         <div className="cart-modal" onClick={(e) => e.stopPropagation()}>
           <div className="cart-header">
             <h2>Sipariş Durumu</h2>
-            <button className="close-button" onClick={onClose}>
-              ✕
-            </button>
           </div>
           <div className="order-success">
             <div className="success-icon">✓</div>
@@ -63,9 +60,6 @@ function Cart({ isOpen, onClose }) {
         <div className="cart-modal" onClick={(e) => e.stopPropagation()}>
           <div className="cart-header">
             <h2>Sepetim</h2>
-            <button className="close-button" onClick={onClose}>
-              ✕
-            </button>
           </div>
           <div className="empty-cart">
             <p>Sepetiniz boş</p>
@@ -83,9 +77,6 @@ function Cart({ isOpen, onClose }) {
       <div className="cart-modal" onClick={(e) => e.stopPropagation()}>
         <div className="cart-header">
           <h2>Sepetim</h2>
-          <button className="close-button" onClick={onClose}>
-            ✕
-          </button>
         </div>
 
         <div className="cart-items">
